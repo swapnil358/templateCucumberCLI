@@ -1,0 +1,21 @@
+ubif:
+  common:
+    name : "ubif"
+    clinet : "ubif"
+  qa:
+    url: "https://stage.ubif.net/login"
+    ubif-uname-password: "/TAS/ubifcaptcha
+
+att:
+  common:
+    name: "attUI"
+    client: "att"
+  qa:
+    url: "https://www.asurion.com/"
+
+sprint:
+  common:
+    name: "sprintUI"
+    client: "sprint"
+  qa:
+    url: "https://www.asurion.com/"

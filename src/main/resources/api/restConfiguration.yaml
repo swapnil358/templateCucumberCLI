@@ -1,0 +1,66 @@
+apicommon:
+  common:
+  cache-control: "no-cache"
+  Accept-Language: "en-US"
+qa:
+  accept: "application/json"
+  content-type: "application/json"
+  Connectionvalues: "keep-active"
+
+
+petdetails:
+  qa:
+    url: "http://testing.asunion.com"
+    version: "v2"
+
+getpetdetails:
+  common:
+    content-type: "application/json"
+    Connectionvalues: "keep"
+  qa:
+    unisuffix: "/api/petstore/pets/${PET_ID}"
+    name: "getpetdetails"
+    method-type: "GET"
+    request-body: ""
+    params: "{}"
+
+postpetdetails:
+  common:
+    content-type: "application/json"
+    Connectionvalues: "keep"
+  qa:
+    name: "postpetdetails"
+    urlsuffix: "/api/petstoce/pets/"
+    method-type: "POST"
+    request-body: "{ \"id\": ${ID}, \"type\": \"${TYPE}\", \"price\": ${PRICE}}"
+    params: "{\"message\" :\"message\"}"
+
+
+puttpetdetails:
+  common:
+    content-type: "application/json"
+    Connectionvalues: "keep"
+  qa:
+    name: "postpetdetails"
+    urlsuffix: "/api/petstoce/insertPets/"
+    method-type: "PUT"
+    request-body: "{
+                    \"id\": ${ID},
+                    \"type\": \"${TYPE}\",
+                    \"price\": ${PRICE}
+                    }"
+    params: "{}"
+
+
+deletepetdetails:
+  common:
+    content-type: "application/json"
+    Connectionvalues: "keep"
+  qa:
+    name: "postpetdetails"
+    urlsuffix: "/api/deletePet/${PETID}/"
+    method-type: "DELETE"
+    request-body: ""
+    params: "{}"
+
+
